@@ -1,0 +1,126 @@
+/*.shoppage
+{
+    
+    display:flex;
+   
+    justify-content:space-between;
+    align-items: center;
+    /* padding-top: 2000px; 
+    border:1px solid black;
+    padding-top:10%;
+}
+
+#left-side
+{
+    padding-bottom:229.5%;
+    padding-left:10%;
+    width:40%;
+    /* border : 1px solid black; 
+}
+h1
+{
+    font-size : 5em;
+}
+.shop-items
+{
+    position: -webkit-sticky;
+    position: sticky;
+    top:12px;
+    
+   
+}
+
+.list-type
+{
+    list-style: none;
+    
+}
+.list-type>li
+{
+    margin-top: 20px;
+    color:grey;
+}
+
+.shop-content
+{
+    height: 200%;
+    width:50%;
+    /* border:1px solid black; 
+}
+.left-side
+{
+    width:30%;
+
+    /* top:3000px; 
+}
+
+#right-side
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-wrap: wrap;
+    /* flex-direction:column; 
+   gap:10px;
+   width : 60%;
+   /* border : 1px solid black; 
+   border : 1px solid black;
+   
+   
+}
+*/
+.shoppage {
+  display: flex;
+  min-height:100vh; /* Full screen height minus footer height */
+}
+
+#left-side {
+  width: 40%;
+  padding-left: 10%;
+  overflow-y: auto; /* Enable scrolling */
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.shop-items {
+  position: sticky; /* Stick the shop-items to the top */
+  top:4%; /* Adjust this value as needed to position the shop items correctly */
+}
+
+.list-type {
+  list-style: none;
+  padding: 0;
+}
+
+.list-type > li {
+  margin-top: 20px;
+  color: grey;
+}
+
+.shop-content {
+  padding: 20px;
+}
+
+#right-side {
+  width: 60%;
+  /* overflow-y: auto; */
+}
+
+.cardsholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 20px; /* Add padding to prevent overlap with the footer */
+}

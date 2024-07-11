@@ -1,0 +1,104 @@
+/* Reset default margin and padding */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* General styling for the header */
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent; /* Default background color */
+  padding: 0.5rem 1rem;
+  height: 40px;
+  position: fixed;
+  top: 0; /* Ensure it's fixed at the top */
+  left: 0; /* Ensure it's fixed at the left */
+  width: 100%;
+  z-index: 2;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+/* Style when header is scrolled */
+.Header.scrolled {
+  background-color: white;
+}
+
+/* Left section of the header */
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Menu icon styling */
+.menu-toggle {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Right section icons styling */
+.right-icons {
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+/* Right section of the header */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .Header {
+    padding: 0.5rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.5rem;
+  }
+
+  .right-icons {
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .navbar-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .navbar-menu ul li {
+    padding: 0 1rem;
+  }
+
+  .navbar-right {
+    margin-left: auto;
+  }
+}
+
+/* Media query for very small screens */
+@media (max-width: 480px) {
+  .Header {
+    padding: 0.25rem;
+  }
+
+  .menu-toggle {
+    font-size: 1.25rem;
+  }
+
+  .right-icons {
+    margin-left: 0.25rem;
+    font-size: 1.25rem;
+  }
+}
