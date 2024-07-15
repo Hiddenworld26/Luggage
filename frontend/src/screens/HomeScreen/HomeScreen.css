@@ -1,29 +1,31 @@
 /* CSS Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  
+  
 }
 
 .Home-Screen {
   width: 100vw;
   min-height: fit-content;
   padding: 0;
+ margin-left: 0;
+ margin-right : 0;
 }
 
 .image-container {
   height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
+  width:100%;
+  
+  /* background-image: url(image2.jpeg);
+  background-size: cover;
+  background-position: center; */
 }
 
 .left-container, .right-container {
   width: 50%;
   height: 100%;
-  background-image: url(image.avif);
-  background-size: cover;
-  background-position: center;
+ 
+  background-repeat: no-repeat;
 }
 
 .tag-line {
@@ -32,7 +34,7 @@
   margin: 20px 0;
 }
 
-/* Responsive styles */
+
 @media (max-width: 1024px) {
   .tag-line {
     font-size: 40px;
@@ -55,16 +57,16 @@
   .image-container {
     flex-direction: column;
     height: auto;
-    margin: 0; /* Remove any extra margin */
+    margin: 0;
   }
 
   .left-container, .right-container {
     width: 100%;
-    height: 30vh; /* Reduced height to make it less scrollable */
+    height: 30vh; 
   }
 
   .Home-Screen > .tag-line {
-    margin-bottom: 10px; /* Reduce space between text and image */
+    margin-bottom: 10px; 
   }
 }
 
@@ -77,15 +79,15 @@
   .image-container {
     flex-direction: column;
     height: auto;
-    margin: 0; /* Remove any extra margin */
+    margin: 0;
   }
 
   .left-container, .right-container {
     width: 100%;
-    height: 25vh; /* Further reduced height to minimize scrolling */
+    height: 25vh; 
   }
 
   .Home-Screen > .tag-line {
-    margin-bottom: 5px; /* Further reduce space between text and image */
+    margin-bottom: 5px; 
   }
 }

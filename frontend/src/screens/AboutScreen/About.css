@@ -5,11 +5,16 @@ body, html {
   font-family: Arial, sans-serif;
 }
 
+body{
+  overflow: hidden;
+} 
+
 .about-us {
   position: relative;
   color: white;
   text-align: center;
   min-height: 100vh;
+
 }
 
 .top-space, .bottom-space {

@@ -12,6 +12,9 @@ const cloudinaryConnect = require("./config/cloud.js");
 const userRoutes = require('./routes/UserRoutes.js');
 const productRoutes = require('./routes/productRoutes.js');
 const fileRoutes = require('./routes/FileRoutes.js');
+const CartRoutes = require('./routes/CartRoutes.js');
+
+
 const errorHandler = require('./middleware/errorMiddleware.js');
 
 connectDB();
@@ -29,6 +32,7 @@ app.use(express.json());
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/files', fileRoutes);
+app.use('/api/carts', CartRoutes);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 1234;

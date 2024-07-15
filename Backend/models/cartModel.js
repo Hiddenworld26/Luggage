@@ -1,33 +1,31 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const CartSchema = mongoose.Schema(
-  {
-    userId : {
-      type: mongoose.Schema.ObjectId,
-      ref:'User',
-      required: true,
-    },
-    productId: {
-      type: mongoose.Schema.ObjectId,
-      required: true,
-      ref:'Product'
-    },
-    quantity:
+const CartSchema = new Schema({
+  user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+  items: [
     {
-        type:Number,
-        required:true
+      product: { type: Schema.Types.ObjectId, ref: 'Product', required: true },
+      quantity: { type: Number, required: true, min: 1 },
     },
-    totalprice:
-    {
-        type:Number,
-        required:true
-    },
-  },
-  {
-    timestamps: true,
+  ],
+});
+
+CartSchema.methods.calculateTotalPrice = async function() {
+  
+  await this.populate('items.product');
+
+  let totalPrice = 0;
+
+  for (let item of this.items) {
+    totalPrice += item.product.price * item.quantity;
   }
-);
 
-const cart = mongoose.model('Cart', CartSchema);
+  return totalPrice;
+};
 
-module.exports = cart;
+
+
+const Cart = mongoose.model('Cart', CartSchema);
+
+module.exports = Cart;

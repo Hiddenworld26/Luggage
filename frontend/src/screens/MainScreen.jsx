@@ -4,15 +4,15 @@ import HomeScreen from './HomeScreen/HomeScreen'
 import LookBook from './LookBook/LookBook'
 import Footer from '../Components/Footer/Footer'
 import ProductPage from './ProductPage/ProductPage'
-import ShopPage from './ShopPage/ShopPage'
+// import ShopPage from './ShopPage/ShopPage'
 import MenuScreen from './MenuScreen/MenuScreen'
 function MainScreen() {
   return (
     <div className='MainScreen'>
 
       {/* <ShopPage/> */}
-    <HomeScreen/>
-      
+    {/* <HomeScreen/>
+       */}
       {/* <LookBook/> */}
      {/* <ProductPage/> */}
 

@@ -27,7 +27,7 @@
 
 
 import React from 'react';
-import img from './image.avif';
+import img from './image2.jpeg';
 import './Homepagecard.css';
 
 function Homepagecard() {
@@ -35,7 +35,7 @@ function Homepagecard() {
     <div className="home-content">
       <div className="left-content">
         <div className='left-sticky'>
-        <h1 className="left-content-title-1">Lazy_Luggage</h1>
+        <h1 className="left-content-title-1">Lazy Luggage</h1>
         <h1 className="left-content-title-2">Splash</h1>
         <h2 className="left-content-title-3">Mens</h2>
         </div>
